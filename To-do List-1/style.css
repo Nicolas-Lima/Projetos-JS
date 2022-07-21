@@ -1,0 +1,279 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: grid;
+    background-color: #f9eae183; 
+    /* #f9eae1ad */
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 15% 1fr;
+    grid-template-rows: 8% 1fr;
+    grid-template-areas: 
+        'header header'
+        'aside section-tarefas';
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    grid-area: aside;
+    border-right: 1px solid #4A306D;
+    align-items: center;
+}
+
+aside > nav {
+    margin-top: 50px;
+}
+
+aside > nav > a {
+    display: block;
+    margin-bottom: 40px;
+    text-decoration: none;
+}
+
+aside > nav > a:hover {
+    cursor: pointer;
+}
+
+a > svg {
+    color: #4A306D;
+    margin-right: 5px;
+}
+
+a > span {
+    font-size: 20px;
+    color: black;
+}
+
+a > span:hover {
+    color: #4A306D;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9eae183;
+    font-size: 20px;
+    border-bottom: 1px solid #4A306D;
+}
+
+header > #nome-lista {
+    margin-left: 25px;
+    color: #4A306D;
+}
+
+#adicionar-tarefa1 {
+    display: flex;
+    align-items: center;
+}
+
+#adicionar-tarefa1 > label {
+    font-size: 20px;
+    margin-left: 10px;
+    color: #4A306D;
+}
+
+#adicionar-tarefa1 > label:hover {
+    cursor: pointer;
+}
+
+header > a {
+    text-decoration: none;
+    margin-right: 25px;
+    color: #4A306D;
+}
+
+header > a:hover {
+    color: black;
+}
+
+#botao-adicionar-tarefa {
+    background-color: #f9eae183;
+}
+
+#botao-adicionar-tarefa > svg {
+    height: 32px;  
+    width: 32px;
+}
+
+#botao-adicionar-tarefa:hover{
+    background-color: #4a306d23;
+    cursor: pointer;
+}
+
+section#tarefas {
+    grid-area: section-tarefas;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+button {
+    padding: 0px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 0px;
+}
+
+#adicionar-tarefa {
+    width: 60%;
+    padding: 5px;
+    display: none;
+}
+
+#adicionar-tarefa > label {
+    font-size: 22px;
+    color: black;
+}
+
+#adicionar-tarefa > #nome-tarefa {
+    display: flex;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 15px;
+    height: 41px;
+}
+
+#adicionar-tarefa > #nome-tarefa > input[type="text"] {
+    width: 95%;
+    font-size: 18px;
+    height: 100%;
+    outline: none;
+    border: none;
+    padding-left: 12px;
+}
+
+#adicionar-tarefa > #nome-tarefa > button{
+    border-radius: 0px;
+    border: none;
+    width: 39px;
+    height: 100%;
+    background-color: white;
+}
+
+#adicionar-tarefa > #nome-tarefa > button > svg {
+    height: 100%;
+    width: 100%;
+    border-left: 1px solid black;
+}
+
+#adicionar-tarefa > #nome-tarefa > button:hover {
+    background-color: #4CB944;
+    cursor: pointer;
+}
+
+#tarefas > div[id *= "tarefa-"] {
+    background-color: rgb(255, 255, 255);
+    width: 60%;
+    height: 40px;
+    padding: 7px;
+    border-radius: 10px;
+    margin-left: 5px;
+    word-break: break-all;
+    margin-bottom: 25px;
+}
+
+[id *= "checkbox-tarefa"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+}
+
+[id *= "checkbox-tarefa"]:hover {
+    cursor: pointer;
+}
+
+#botao-lixeira {
+    border: none;
+    width: 34px;
+    height: 34px;
+    background-color: white;
+    margin-right: 10px;
+}
+
+#botao-lixeira > svg {
+    width: 20px;
+    height: 20px;
+}
+
+#botao-lixeira:hover {
+    background-color: #FA003F;
+    cursor: pointer;
+}
+
+@media (max-width: 1191px) {
+    body {
+        grid-template-columns: 20% 1fr;
+    }
+
+    #adicionar-tarefa {
+        width: 75%
+    }
+    
+    #tarefas > div[id *= "tarefa-"] {
+        width: 85%;
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        grid-template-columns: 25% 1fr;
+    }
+
+    section#tarefas {
+        margin-left: 35px;
+    }
+
+    #adicionar-tarefa {
+        width: 85%
+    }
+    
+    #tarefas > div[id *= "tarefa-"] {
+        width: 90%;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        grid-template-columns: 27% 1fr;
+    }
+
+    #label-botao-adicionar-tarefa {
+        display: none;
+    }
+
+    section#tarefas {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    #adicionar-tarefa {
+        width: 95%
+    }
+    
+    #tarefas > div[id *= "tarefa-"] {
+        width: 95%;
+    }
+}
+
+@media (max-width: 620px) {
+    body {
+        grid-template-columns: 30% 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+
+}

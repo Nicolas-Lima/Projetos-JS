@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+	<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+  </head>
+  
+  <body class="">
+    <div class="container-fluid">
+	    <div class="row">
+        <div class="d-flex flex-column col-12 col-md-6 mx-md-auto" id="board">
+    		  
+          <h1 class="text-primary text-center mt-5" id="questionTitle"></h1>
+  			
+          <div class="d-grid gap-2 mt-5" id="answers"></div>
+
+          <div id="actions" class="mt-5 d-flex justify-content-between">
+            <button class="btn btn-danger invisible" type="button" id="previousQuestion">Anterior</button>
+
+            <button type="button" class="btn" id="darkMode">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-lightbulb-off" viewBox="0 0 16 16" id="lightBulbOffSvg">
+                <path fill-rule="evenodd" d="M2.23 4.35A6.004 6.004 0 0 0 2 6c0 1.691.7 3.22 1.826 4.31.203.196.359.4.453.619l.762 1.769A.5.5 0 0 0 5.5 13a.5.5 0 0 0 0 1 .5.5 0 0 0 0 1l.224.447a1 1 0 0 0 .894.553h2.764a1 1 0 0 0 .894-.553L10.5 15a.5.5 0 0 0 0-1 .5.5 0 0 0 0-1 .5.5 0 0 0 .288-.091L9.878 12H5.83l-.632-1.467a2.954 2.954 0 0 0-.676-.941 4.984 4.984 0 0 1-1.455-4.405l-.837-.836zm1.588-2.653.708.707a5 5 0 0 1 7.07 7.07l.707.707a6 6 0 0 0-8.484-8.484zm-2.172-.051a.5.5 0 0 1 .708 0l12 12a.5.5 0 0 1-.708.708l-12-12a.5.5 0 0 1 0-.708z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-lightbulb d-none" viewBox="0 0 16 16" id="lightBulbSvg">
+                <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"/>
+              </svg>
+            </button>
+            <button class="btn btn-success" type="button" id="nextQuestion">Próximo</button>
+          </div>
+    		</div>
+    	</div>
+    </div>
+
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <script src="script.js"></script>
+
+    <script>
+        const game = new Game
+
+        const gameArea = game.gameArea(800, 600, 10)
+
+        gameArea.style({
+            margin: "auto",
+            backgroundColor: "green",
+        })
+
+        gameArea.fullScreen()
+
+        const character1 = game.createCharacter(25, 15, "character1")
+
+        character1.movement(5, ["w", "d", "s", "a"])
+
+        character1.spritesheet("spritesheet.png", 32, 35, {
+            Stopped: 0,
+            Right: 1,
+            Left: 3,
+            Up: 2
+        })
+
+        const character3 = game.createCharacter(25, 15, "character3")
+        character3.style({
+            "background": "red",
+            left: "300px"
+        })
+
+        //----------------------------------------------//
+        character3.addToColliding()
+        //----------------------------------------------//
+
+        const element1 = game.createElement("element1", 300, 50, 125, 400)
+        // const element2 = game.createElement("element2", 300, 50, 100, 100)
+        const element3 = game.createElement("element3", 200, 50, 450, 150)
+
+        element1.style({
+                border: "0px solid black",
+                backgroundColor: "red",
+                borderRadius: "30px"
+            })
+        // element2.style({border: "1px solid black", backgroundColor: "black", borderRadius: "30px"})
+        element3.style({
+            border: "1px solid black",
+            backgroundColor: "blueviolet",
+            borderRadius: "30px"
+        })
+    </script>
+</body>
+
+</html>

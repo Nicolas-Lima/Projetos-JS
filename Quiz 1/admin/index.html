@@ -1,0 +1,114 @@
+  <!DOCTYPE html>
+
+<html lang="pt-br">
+	<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+  </head>
+  
+  <body class="">
+
+    <div class="container-fluid">
+    	<div class="row">
+    		<div class="col-12 col-md-8 col-lg-5 px-4 mx-auto">
+    			<h1 class="text-center text-secondary my-4">Admin</h1>
+
+          <div id="imageOptions" class="fixed-top my-4 d-none" style="left: 5px; width: 198px;">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Personalizar imagem
+              </button>
+              <ul class="dropdown-menu px-3" style="width: 460px;">
+                <li class="d-inline">
+                  <div id="mxSizes" class="d-inline">
+                    <label for="mtSize" class="form-label">Mt</label>
+                    <input type="number" value="5" min="0" max="5" class="form-control d-inline p-1 ps-2 pe-0 shadow-none" id="mtSize" style="width: 40px !important;">
+      
+                    <label for="mbSize" class="form-label ms-2">Mb</label>
+                    <input type="number" value="5" min="0" max="5" class="form-control d-inline p-1 ps-2 pe-0 shadow-none" id="mbSize" style="width: 40px !important;">
+                  </div>
+                </li>
+                <li class="d-inline">
+                  <div id="" class="d-inline">
+                    <label for="imageSize" class="form-label ms-2">Size</label>
+                    <input type="number" value="100" min="0" max="100" class="form-control d-inline p-1 ps-2 pe-0 shadow-none" id="imageSize" style="width: 80px !important;">
+                  </div>
+                </li>
+                <li class="d-inline">
+                  <div class="ms-2 mt-3 form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="centralizedOption">
+                    <label class="form-check-label" for="centralizedOption">Centralizada</label>
+                  </div>
+                </li>
+                <li>
+                  <div id="" class="mt-3">
+                    <label for="imageName" class="form-label">Nome da imagem</label>
+                    <input type="text" class="form-control d-inline p-1 ps-2 pe-0 shadow-none" id="imageName" value="avenue.jpg" style="width: 100px !important;">
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+    			<form role="form">
+    				<div class="form-group">
+    					<input type="text" class="form-control" id="question" placeholder="Pergunta"/>
+    				</div>
+
+            <div id="divAddImage" class="mt-3">
+              <button type="button" class="btn btn-primary d-flex align-items-center" id="addImage">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg me-2" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"></path>
+                </svg>
+                Adicionar imagem
+              </button>
+            </div>
+            <div id="divImage" class="d-none">
+              <img src="imgs/avenue.jpg" class="mx-auto d-block mb-5 mt-5" alt="..." style="max-width: 100%;" id="image">
+            </div>
+    		
+    				<div class="mt-5" id="divAnswers">
+    					<div id="divAddAnswer" class="mt-3">
+                <button type="button" class="btn btn-primary d-flex align-items-center" id="addAnswer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg me-2" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"></path>
+                  </svg>
+                  Adicionar resposta
+                </button>
+    					</div>
+    				</div>
+    				
+    		    <div class="form-group mt-4" id="rightAnswer">
+        		  <span class="text-success" style="font-size: 18px;">Indique a resposta certa</span>
+        		  <select class="form-select w-auto mt-1" aria-label="Default select example">
+        		  </select>
+        		  
+            <button type="button" class="btn btn-primary d-flex align-items-center mt-3" id="copyToClipboard">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard me-2" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path>
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path>
+              </svg>
+                Copiar
+            </button>
+  				  </div>
+    			</form>
+    		</div>
+    	</div>
+    </div>
+    
+    <style>
+      #divAnswer .form-select {
+        color: blue;
+        background-color: white !important;
+        background-image: unset !important;
+      }
+    </style>
+
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+  </body>
+</html>

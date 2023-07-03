@@ -1,0 +1,13 @@
+#board {
+  min-width: 35% !important;
+}
+
+#darkMode {
+  outline: none !important;
+  box-shadow: none !important;
+  border: unset !important;
+}
+
+#actions {
+  margin-bottom: 20px;
+}
